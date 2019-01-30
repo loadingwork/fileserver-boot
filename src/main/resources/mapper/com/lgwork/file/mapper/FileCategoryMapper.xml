@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lgwork.file.mapper.FileCategoryMapper">
+
+	<sql id="table_name">file_category</sql>
+	
+	<resultMap type="FileCategoryPO" id="baseMap" extends="com.lgwork.file.mapper.BaseMapMapper.baseTreeMap">
+		<result property="name" column="name" />
+		<result property="storageType" column="storage_type" />
+		<result property="remarks" column="remarks" />
+	</resultMap>
+	
+	<sql id="sqlAllColumn">
+		<include refid="com.lgwork.file.mapper.BaseMapMapper.baseTreeMapAll"></include>,
+		name,
+		storage_type,
+		remarks
+	</sql>
+	
+	<!-- 根据code查询 -->
+	<select id="selectByCode" parameterType="string" resultMap="baseMap" >
+		select
+		<include refid="sqlAllColumn"></include>
+		from <include refid="table_name"></include>
+		where 1=1
+		and is_deleted=0
+		and code = #{code}
+	</select>
+
+
+</mapper>

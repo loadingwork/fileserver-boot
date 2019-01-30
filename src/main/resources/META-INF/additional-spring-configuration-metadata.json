@@ -1,0 +1,53 @@
+{
+	"groups": [
+		{
+			"name": "files",
+			"type": "com.lgwork.file.config.FileConfigProperties",
+			"sourceType": "com.lgwork.file.config.FileConfigProperties"
+		}
+	],
+	"properties": [
+		{
+			"name": "files.root",
+			"type": "java.lang.String",
+			"description": "'文件根目录'",
+		},
+		{
+			"name": "files.thumbnailRoot",
+			"type": "java.lang.String",
+			"description": "'缩略图目录'"
+		},
+		{
+			"name": "files.url",
+			"type": "java.lang.String",
+			"description": "'访问地址'"
+		},
+		{
+			"name": "files.thumbnailUrl",
+			"type": "java.lang.String",
+			"description": "'缩略图访问地址'"
+		},
+		{
+			"name": "files.deleteUrl",
+			"type": "java.lang.String",
+			"description": "'文件删除接口地址'"
+		},
+		{
+			"name": "files.deleteType",
+			"type": "java.lang.String",
+			"description": "'文件删除方法'",
+			"defaultValue": "DELETE"
+		},
+		{
+			"name": "files.sysFiles",
+			"type": "java.util.Map",
+			"description": "'系统配置文件'"
+		},
+		{
+			"name": "files.sysFileType",
+			"type": "java.lang.String",
+			"description": "'系统配置文件分类'",
+			"defaultValue": "system"
+		}
+	]
+}

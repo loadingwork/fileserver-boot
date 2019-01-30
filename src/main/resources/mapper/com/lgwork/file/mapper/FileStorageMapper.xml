@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lgwork.file.mapper.FileStorageMapper">
+
+	<sql id="table_name">file_storage</sql>
+
+	<resultMap type="FileStoragePO" id="baseMap"
+		extends="com.lgwork.file.mapper.BaseMapMapper.baseMap">
+		<result property="fileCode" column="file_code" />
+		<result property="categoryCode" column="category_code" />
+		<result property="fileKey" column="file_key" />
+		<result property="description" column="description" />
+		<result property="originalName" column="original_name" />
+		<result property="ext" column="ext" />
+		<result property="fileSize" column="file_size" />
+		<result property="storageName" column="storage_name" />
+		<result property="tempExpiresAt" column="temp_expires_at" />
+		<result property="storageType" column="storage_type" />
+		<result property="createBy" column="create_by" />
+		<result property="enabled" column="is_enabled" />
+	</resultMap>
+	
+	<sql id="sqlAllColumn">
+		<include refid="com.lgwork.file.mapper.BaseMapMapper.baseMapAll"></include>,
+		file_code,
+		category_code,
+		file_key,
+		description,
+		original_name,
+		ext,
+		file_size,
+		storage_name,
+		temp_expires_at,
+		storage_type,
+		create_by,
+		is_enabled
+	</sql>
+	
+	<!-- 根据file_code查询 -->
+	<select id="selectByFileCode" parameterType="string" resultMap="baseMap" >
+		select
+		<include refid="sqlAllColumn"></include>
+		from <include refid="table_name"></include>
+		where 1=1
+		and is_deleted=0
+		and file_code = #{fileCode}
+	</select>
+	
+
+</mapper>

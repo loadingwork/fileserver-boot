@@ -1,0 +1,41 @@
+
+.demo1 {
+	border: 1px solid #ddd;
+	padding: 10px;
+	margin-bottom: 20px;
+}
+
+.demo1  span {
+	margin-bottom: 20px;
+}
+
+.demo1 .progress {
+   margin-bottom: 10px;
+}
+
+.demo1 .result {
+	word-break: break-all;
+	word-wrap: word-wrap;
+	overflow: hidden;
+}
+
+
+
+.demo2 {
+	border: 1px solid #ddd;
+	padding: 10px;
+}
+
+.demo2  span {
+	margin-bottom: 20px;
+}
+
+.demo2 .progress {
+   margin-bottom: 10px;
+}
+
+.demo2 .result {
+	word-break: break-all;
+	word-wrap: word-wrap;
+	overflow: hidden;
+}

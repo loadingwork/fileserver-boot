@@ -1,0 +1,63 @@
+
+.elem-quote {
+	 margin-bottom: 10px; 
+     padding: 15px; 
+     line-height: 22px; 
+     border-radius: 2px; 
+     background-color: #f2f2f2; 
+}
+
+
+.field-title {
+	border-width: 1px 0 0;
+}
+
+.field-title legend {
+	margin-left: 20px;
+    padding: 0 10px;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.form-demo1 {
+	border: 1px solid #eee;
+	margin-bottom: 20px;
+}
+
+
+.form-demo2 {
+	border: 1px solid #eee;
+	margin-bottom: 20px;
+}
+
+.form-demo3 {
+	border: 1px solid #eee;
+	margin-bottom: 20px;
+}
+
+.ajax-demo1, .ajax-demo2 {
+	border: 1px solid #eee;
+	margin-bottom: 20px;
+}
+
+
+.list-group > .list-group-item {
+	cursor: pointer;
+}
+
+.list-group > .list-group-item:hover {
+	background: #eee;
+}
+
+.list-group a {
+	display: block;
+	list-style: none;
+	text-decoration: none;
+}
+
+
+
+
+
+
+
